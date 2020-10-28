@@ -20,8 +20,8 @@ public class WorkTime {
         this.repository = repository;
     }
 
-    public void getSalary(String test) {
-        String[] info = StringUtils.split(test, "=");
+    public void getSalary(String value) {
+        String[] info = StringUtils.split(value, "=");
         String nameEmployee = info[0];
         String[] timeString = info[1].split("[,]", 0);
         int salary = 0;

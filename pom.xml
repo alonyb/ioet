@@ -62,5 +62,12 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>ACME</name>
+			<url>https://maven.pkg.github.com/alonyb/ioet</url>
+		</repository>
+	</distributionManagement>
 
 </project>
