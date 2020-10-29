@@ -9,7 +9,6 @@ import org.junit.runner.RunWith;
 import org.mockito.*;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import java.time.LocalTime;
 
 @RunWith(MockitoJUnitRunner.class)
 public class WorkTimeTest {
@@ -57,21 +56,5 @@ public class WorkTimeTest {
         errorCollector.checkThat(value, CoreMatchers.notNullValue());
         errorCollector.checkThat(value, CoreMatchers.equalTo(true));
         errorCollector.checkThat(value, CoreMatchers.instanceOf(Boolean.class));
-    }
-
-    @Test
-    public void timeOfDay() {
-
-        // ARRANGE
-        LocalTime timeValue = LocalTime.of(9, 0, 0);
-        int value;
-
-        // ACT
-        value = workTime.timeOfDay(timeValue);
-
-        // ASSERT
-        errorCollector.checkThat(value, CoreMatchers.notNullValue());
-        errorCollector.checkThat(value, CoreMatchers.equalTo(1));
-        errorCollector.checkThat(value, CoreMatchers.instanceOf(Integer.class));
     }
 }
