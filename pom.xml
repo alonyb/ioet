@@ -17,8 +17,28 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<sonar.projectKey>alonyb_ioet</sonar.projectKey>
+		<sonar.inclusions>src/main/java/**,src/main/resources/**</sonar.inclusions>
+		<sonar.organization>rubenbaez</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
-
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.7.0.1746</version>
+				<executions>
+					<execution>
+						<phase>verify</phase>
+						<goals>
+							<goal>sonar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -61,5 +81,4 @@
 			<url>https://maven.pkg.github.com/alonyb/ioet</url>
 		</repository>
 	</distributionManagement>
-
 </project>
