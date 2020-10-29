@@ -7,17 +7,14 @@ public class TimeUtil {
     public static LocalTime localTime(String hours, String status) {
         String[] tim = hours.split("[-]", 0);
         if (status.equals("start")){
-            LocalTime start = LocalTime.parse(tim[0]);
-            return start;
+            return LocalTime.parse(tim[0]);
         } else {
-            LocalTime end = LocalTime.parse(tim[1]);
-            return end;
+            return LocalTime.parse(tim[1]);
         }
     }
 
     public static int getHoursElapsed(LocalTime end, LocalTime start) {
-        int hoursWorked = end.getHour() - start.getHour();
-        return hoursWorked;
+        return end.getHour() - start.getHour();
     }
 
 }

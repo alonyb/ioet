@@ -9,18 +9,18 @@ public enum Compensation {
     WEEKEND_EVENING(20, Schedules.AFTER_NOON.name(), true),
     WEEKEND_NIGHT(25, Schedules.NIGHT.name(), true);
 
-    private final int compensation;
+    private final int comp;
     private final String schedule;
     private final boolean weekend;
 
     Compensation(int compensation, String schedule, boolean weekend) {
-        this.compensation = compensation;
+        this.comp = compensation;
         this.schedule = schedule;
         this.weekend = weekend;
     }
 
     public int getCompensation() {
-        return compensation;
+        return comp;
     }
 
     public static Compensation getBySchedule(boolean weekend, String schedule) {
