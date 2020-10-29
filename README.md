@@ -9,7 +9,9 @@ This project is in Java using maven as software project management that calculat
 
 # Architecture
 This proyect was based on hexagonal architecture.
-![Image of architecture](https://drive.google.com/file/d/1VT5eyKmnZh2H31nhXF2NRJlP8zagm5Nb/view?usp=sharing)
+
+![hexagonal](https://user-images.githubusercontent.com/13793894/97639761-391c8700-1a0d-11eb-9194-933b805290bc.png)
+
 If you want to see more examples check:
 * [Golang](https://github.com/alonyb/url_shortener) - Project based on hexagonal arch and using Golang.
 * [Docs](https://alistair.cockburn.us/hexagonal-architecture/) - Good reference docs about this arch.
@@ -17,7 +19,8 @@ If you want to see more examples check:
 # Dockerhub
 This proyect use the amazing Dockerhub to manage docker images.
 You can check it [here](https://hub.docker.com/repository/docker/rubendario/ioet)
-![image](https://drive.google.com/file/d/1oKB9vuFqCI11Do6RRiLUYJu6eyelwH6m/view?usp=sharing)
+
+<img width="764" alt="dockerhub" src="https://user-images.githubusercontent.com/13793894/97639862-6d904300-1a0d-11eb-8cbd-f3c8f4ea2c1a.png">
 
 # GitHub
 * ### Actions
