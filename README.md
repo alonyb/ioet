@@ -39,6 +39,10 @@ docker pull rubendario/ioet:latest
 docker run <id-image>
 ```
 
+### Example
+![Screen Shot 2020-10-30 at 09 17 35](https://user-images.githubusercontent.com/13793894/97715747-c0f7a500-1a90-11eb-9db2-306635d5d382.png)
+
+
 # Cloning project to run locally
 The following will give you a project that is set up and ready to use.
 
