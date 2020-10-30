@@ -11,7 +11,7 @@ public class WorkTime {
 
     private InEmployeeRepository repository;
 
-    private TimeUtil timeUtil;
+    private TimeUtil timeUtil = new TimeUtil();
 
     public WorkTime(InEmployeeRepository repository) {
         this.repository = repository;

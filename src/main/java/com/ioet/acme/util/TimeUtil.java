@@ -4,7 +4,7 @@ import java.time.LocalTime;
 
 public class TimeUtil {
 
-    public static LocalTime localTime(String hours, String status) {
+    public LocalTime localTime(String hours, String status) {
         String[] tim = hours.split("[-]", 0);
         if (status.equals("start")){
             return LocalTime.parse(tim[0]);
@@ -13,7 +13,7 @@ public class TimeUtil {
         }
     }
 
-    public static int getHoursElapsed(LocalTime end, LocalTime start) {
+    public int getHoursElapsed(LocalTime end, LocalTime start) {
         return end.getHour() - start.getHour();
     }
 
