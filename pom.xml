@@ -89,7 +89,14 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-    </dependencies>
+		<!-- https://mvnrepository.com/artifact/com.github.docker-java/docker-java -->
+		<dependency>
+			<groupId>com.github.docker-java</groupId>
+			<artifactId>docker-java</artifactId>
+			<version>3.2.5</version>
+		</dependency>
+
+	</dependencies>
 
 	<distributionManagement>
 		<repository>
