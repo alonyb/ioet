@@ -4,7 +4,6 @@ import com.ioet.acme.enums.Compensation;
 import com.ioet.acme.enums.Schedules;
 import com.ioet.acme.repository.InEmployeeRepository;
 import com.ioet.acme.util.TimeUtil;
-import org.springframework.util.StringUtils;
 
 import java.time.LocalTime;
 
@@ -19,7 +18,7 @@ public class WorkTime {
     }
 
     public void getSalary(String value) {
-        String[] info = StringUtils.split(value, "=");
+        String[] info = value.split("=");
         String nameEmployee = info[0];
         String[] timeString = info[1].split("[,]", 0);
         int salary = 0;
