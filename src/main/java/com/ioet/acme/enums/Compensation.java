@@ -23,22 +23,22 @@ public enum Compensation {
         return comp;
     }
 
-    public static Compensation getBySchedule(boolean weekend, String schedule) {
+    public static int getBySchedule(boolean weekend, String schedule) {
         if (!weekend) {
             if (schedule.equals(Schedules.MORNING.name())) {
-                return Compensation.MONDAY_TO_FRIDAY_MORNING;
+                return Compensation.MONDAY_TO_FRIDAY_MORNING.getCompensation();
             } else if (schedule.equals(Schedules.AFTER_NOON.name())) {
-                return Compensation.MONDAY_TO_FRIDAY_AFTERNOON;
+                return Compensation.MONDAY_TO_FRIDAY_AFTERNOON.getCompensation();
             } else {
-                return Compensation.MONDAY_TO_FRIDAY_NIGHT;
+                return Compensation.MONDAY_TO_FRIDAY_NIGHT.getCompensation();
             }
         } else {
             if (schedule.equals(Schedules.MORNING.name())) {
-                return Compensation.WEEKEND_MORNING;
+                return Compensation.WEEKEND_MORNING.getCompensation();
             } else if (schedule.equals(Schedules.AFTER_NOON.name())) {
-                return Compensation.WEEKEND_EVENING;
+                return Compensation.WEEKEND_EVENING.getCompensation();
             } else {
-                return Compensation.WEEKEND_NIGHT;
+                return Compensation.WEEKEND_NIGHT.getCompensation();
             }
         }
     }

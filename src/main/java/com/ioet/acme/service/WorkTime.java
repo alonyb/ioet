@@ -27,19 +27,22 @@ public class WorkTime {
             String hours = s.substring(2);
             LocalTime start = timeUtil.localTime(hours, "start");
             LocalTime end = timeUtil.localTime(hours, "end");
-            String schedule = "";
-            if (start.isAfter(Schedules.MORNING.getStart()) && end.isBefore(Schedules.MORNING.getEnd())) {
-                schedule = Schedules.MORNING.name();
-            } else if (start.isAfter(Schedules.AFTER_NOON.getStart()) && end.isBefore(Schedules.AFTER_NOON.getEnd())) {
-                schedule = Schedules.AFTER_NOON.name();
-            } else if (start.isAfter(Schedules.NIGHT.getStart()) && end.isBefore(Schedules.NIGHT.getEnd())) {
-                schedule = Schedules.NIGHT.name();
-            }
-            int payment = Compensation.getBySchedule(weekend(day), schedule).getCompensation();
+            String schedule = getSchedule(start, end);
+            int payment = Compensation.getBySchedule(weekend(day), schedule);
             payment = timeUtil.getHoursElapsed(end, start) * payment;
             salary += payment;
         }
         repository.employee(nameEmployee, salary);
+    }
+
+    private String getSchedule(LocalTime start, LocalTime end) {
+        if (start.isAfter(Schedules.MORNING.getStart()) && end.isBefore(Schedules.MORNING.getEnd())) {
+            return Schedules.MORNING.name();
+        } else if (start.isAfter(Schedules.AFTER_NOON.getStart()) && end.isBefore(Schedules.AFTER_NOON.getEnd())) {
+            return Schedules.AFTER_NOON.name();
+        } else {
+            return Schedules.NIGHT.name();
+        }
     }
 
     public boolean weekend(String day) {
